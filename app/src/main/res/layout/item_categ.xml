@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:background="@drawable/blue_rectangle_categ">
+
+    <TextView
+        android:id="@+id/categTitletItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Politics"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="35sp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/CategViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@+id/categTitletItem"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorBackCardView"
+        android:padding="0dp"></android.support.v4.view.ViewPager>
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/circlecateg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CategViewPager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/CategViewPager"
+        android:id="@+id/moreButton"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#000"
+        android:padding="3dp"
+        android:text="More Articles"
+        android:textColor="#fff"
+        android:textSize="15sp"
+
+        />
+
+</RelativeLayout>

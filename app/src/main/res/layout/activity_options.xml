@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8000000"
+    tools:context=".mainactivities.filteroptions.OptionsActivity">
+
+ <LinearLayout
+     android:layout_width="250dp"
+     android:layout_height="wrap_content"
+     android:id="@+id/linearOptionCateg"
+     android:orientation="vertical"
+     android:layout_margin="20dp"
+     android:layout_centerHorizontal="true"
+     >
+
+ </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radio"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearOptionCateg"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <RadioButton
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/radio"
+            android:checked="true"
+            android:text="Sort by date"
+            android:textColor="#fff" />
+
+        <RadioButton
+            android:id="@+id/likes"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="Sort by likes"
+            android:textColor="#fff" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_margin="15dp"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/submitOption"
+        android:layout_below="@+id/radio"
+        android:background="@color/colorBackCardView"
+        android:textColor="#fff"
+        />
+</RelativeLayout>

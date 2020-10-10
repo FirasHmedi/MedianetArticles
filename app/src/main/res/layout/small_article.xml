@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivities.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#d8000000"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorBackCardView"
+            android:padding="6dp"
+            >
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        android:layout_margin="1dp"
+        android:gravity="left"
+     />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textViewContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Medium Text"
+        android:textColor="#fff"
+        android:maxLength="90"
+        android:padding="2dp"
+        android:textSize="20dp" />
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

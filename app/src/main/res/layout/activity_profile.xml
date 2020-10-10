@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".mainactivities.user.ProfileActivity"
+    android:background="@color/colorBackCardView"
+    >
+
+
+        <ImageView
+            android:id="@+id/imageViewProfileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="40dp"
+            android:scaleType="fitCenter"></ImageView>
+
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewProfileImage"
+        android:padding="10dp"
+        android:text="username"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUsername"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:textSize="30sp"
+        android:text="email"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="#fff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editProfile"
+        android:text="Edit profile"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="190dp"
+        android:layout_marginStart="40dp"
+        />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+
+        android:layout_marginBottom="120dp"
+        android:text="Logout" />
+
+</RelativeLayout>

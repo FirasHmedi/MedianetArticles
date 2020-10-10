@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:padding="5dp"
+    android:layout_width="match_parent"
+    android:background="#d8000000"
+    android:layout_height="80dp">
+
+<ImageView android:layout_height="55dp"
+    android:layout_width="55dp"
+
+    android:src="@drawable/profile_img0"
+    android:id="@+id/imageProfileComment"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:id="@+id/commentUsername"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp"
+        android:text="Ali Ahmed"
+        android:layout_toRightOf="@+id/imageProfileComment"
+      />
+<TextView
+     android:layout_width="wrap_content"
+    android:layout_height="37dp"
+    android:id="@+id/commentTextv"
+    android:textSize="18sp"
+    android:textColor="#fff"
+
+    android:text="Hi How Are you"
+    android:layout_below="@+id/commentUsername"
+    android:layout_toRightOf="@+id/imageProfileComment"
+    />
+
+</RelativeLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:background="@color/colorBackCardView"
+    tools:context=".mainactivities.ArticleActivity">
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="50dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:id="@+id/tvTitleArticle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:padding="2dp"
+                android:text="Medium Text"
+                android:textColor="#fff"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvDateArticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitleArticle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:padding="2dp"
+                android:gravity="center"
+                android:text="Medium Text"
+                android:textColor="#fff"
+
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tvAuteurNomArticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitleArticle"
+                android:layout_marginStart="15dp"
+                android:gravity="left"
+                android:padding="2dp"
+                android:text="Medium Text"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvContentArticle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAuteurNomArticle"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:padding="2dp"
+                android:text="Medium Text"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:text="Photos"
+                android:textSize="14sp"
+                android:id="@+id/showPics"
+                android:onClick="showPics"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@+id/tvContentArticle"
+                android:textColor="#fff"
+                android:gravity="start|center_vertical"
+                android:paddingStart="15dp"
+                android:drawableRight="@drawable/rfab__drawable_rfab_default"
+                android:background="#D8000000"
+                />
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@+id/showPics"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:visibility="gone"
+                />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/view_pager"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:padding="10dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:textSize="14sp"
+            android:text="Video / Podcast"
+            android:id="@+id/showVideoPodcast"
+            android:onClick="showVideoPodcast"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/circle"
+            android:textColor="#fff"
+            android:gravity="start|center_vertical"
+            android:paddingStart="15dp"
+            android:drawableRight="@drawable/rfab__drawable_rfab_default"
+            android:background="#D8000000"
+            />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_rectangle"
+                android:layout_margin="17dp"
+                android:padding="3dp"
+                android:id="@+id/frameLayoutVid"
+                android:visibility="gone"
+                >
+            <fragment
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:id="@+id/youtubeplayerfragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/round_rectangle_activity"
+                android:id="@+id/podcastlayout"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                >
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekbar"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="140dp"
+                android:layout_centerVertical="true"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:id="@+id/linearButtn"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                >
+                <Button
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/fast_rewind"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="10dp"
+                    android:id="@+id/rewind"
+                    android:onClick="doRewind"
+                    android:layout_margin="5dp"
+                    />
+
+                <Button
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/play"
+                android:textSize="10dp"
+                android:id="@+id/startpodcast"
+                android:layout_gravity="center_vertical"
+                android:onClick="doStartPodcast"
+                    android:layout_margin="5dp"
+                />
+
+                <Button
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/pause"
+                    android:textSize="10dp"
+                    android:id="@+id/pausepodcast"
+                    android:onClick="pausePodcast"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    />
+
+                <Button
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/fast_forward"
+                    android:textSize="10dp"
+                    android:id="@+id/goforward"
+                    android:onClick="doFastForward"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    />
+
+            </LinearLayout>
+            </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+        <include layout="@layout/bottom_sheet"/>
+    <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout
+
+        android:id="@+id/activity_main_rfal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rfal_frame_color="#00FFFFFF"
+        rfal_frame_alpha="0"
+
+        >
+        <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionButton
+            xmlns:rfab="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/activity_main_rfab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="40dp"
+            android:padding="2dp"
+            rfab:rfab_size="normal"
+            rfab:rfab_drawable="@drawable/rfab__drawable_rfab_default"
+            rfab:rfab_color_normal="#003D88"
+            rfab:rfab_color_pressed="#0022FF"
+
+
+            />
+    </com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
